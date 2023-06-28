@@ -1,0 +1,50 @@
+<script>
+    //PROBLEMA: Vínculo empregatício
+    //Peça para o usuário informar qual a sua remuneração mensal (salário). Peça também para o usuário informar qual cargo que ocupa e 
+    //quantas horas trabalha por dia. Considere 20 dias de trabalho no mês.
+    //Se o usuário for "Estagiário", e trabalhar até 6 horas diárias (inclusive), o programa deverá informar quanto recebe por hora.
+    //Se o usuário for "Estagiário", e trabalhar mais que 6 horas diárias, o programa deverá apresentar a mensagem "Precisa ser contratado", 
+    //além de calcular um adicional de 50% (50/100) na sua remuneração. Apresente também quanto recebe por hora, já com o adicional previsto.
+    //Se o usuário for "Programador" e trabalhar até 8 horas diárias (inclusive), o programa deverá informar quanto recebe por hora.
+    //Se o usuário for "Programador" e trabalhar mais que 8 horas diárias, o programa deverá calcular um adicional de 30% (30/100) na sua remuneração. 
+    //Apresente também quanto recebe por hora, já com o adicional previsto.
+
+    //ENTRADA
+    const remuneraçãoMensal = Number(prompt(`Insira quanto é a sua remuneração mensal:`));
+    const cargo = Number(prompt(`Insira qual é o cargo que você trabalha:(Estagiário ou Programador)`));
+    const horasDia = Number(prompt(`Insira quantas horas você trabalha por dia:`));
+    //PROCESSAMENTO
+    if(cargo == `Estagiário`){
+        if(horasDia <= 6){
+            let horasmes = horasDia * 20 ;
+            let valorDia =  remuneraçãoMensal / horasmes ;
+            alert(`Você ganha R$ ${valorDia} por dia.`);
+        }
+        else{
+            let horasmes = horasDia *20 ;
+            let aumento = (0.5 * remuneraçãoMensal) + remuneraçãoMensal;
+            let valorDia = aumento /horasmes;
+            alert(`Precisa ser contratado!  você recebe por dia R$ ${valorDia}`) ;
+        }
+    }
+
+    else if(cargo == `Programador`){
+        if(horasDia <= 8){
+            let horasmes = horasDia * 20 ;
+            let valorDia =  remuneraçãoMensal / horasmes ;
+            alert(`Você ganha R$ ${valorDia} por dia.`);
+        }
+        else{
+            let horasmes = horasDia *20 ;
+            let aumento = (0.5 * remuneraçãoMensal) + remuneraçãoMensal;
+            let valorDia = aumento /horasmes;
+            alert(`Precisa ser contratado!  você recebe por dia R$ ${valorDia}`); 
+        }
+    }
+    else{
+        alert(`Cargo invalido! digite novamente`);
+    }
+    
+    //SAÍDA
+
+</script>

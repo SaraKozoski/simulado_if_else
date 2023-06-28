@@ -1,0 +1,42 @@
+<script>
+    //PROBLEMA
+    /*
+    Faça um script que pergunte ao veterinário quantas consultas de baixa complexidade atende por dia, quantas consultas de média complexidade atende 
+    por dia e quantas consultas de alta complexidade atende por dia.
+    Considere que os procedimentos de baixa complexidade consomem 15 minutos, os de média complexidade consomem 40 minutos e os de alta complexidade
+    consomem 75 minutos.
+    Calcule o tempo total que o veterinário deverá trabalhar para realizar todos os atendimentos no dia.
+    Se o tempo de trabalho não ultrapassar as 8 horas, o salário do veterinário será R$ 50,00 a hora. Caso o tempo de trabalho estiver entre 8 e 10 horas, 
+    o preço da hora será de R$ 75,00. Ultrapassando as 10 horas, o preço da hora será de R$ 90,00.
+    Apresente em tela as horas e minutos trabalhados e o valor total que o veterinário receberá.
+    */
+
+    //ENTRADA;
+    const baixaComplexidade = Number(prompt(`Insira quantas consultas de baixa complexidade você atende por dia:`));
+    const mediaComplexidade = Number( prompt(`Insira quantas consultas de média complexidade você atende por dia:`));
+    const altaComplexidade = Number (prompt(`Insira quantas consultas de alta complexidade você atende por dia:`));
+
+    //PROCESSAMENTO
+    let tempoBaixa = baixaComplexidade * 15;
+    let tempoMedia = mediaComplexidade * 40;
+    let tempoAlta = altaComplexidade * 75;
+    let tempoTotal = (tempoAlta + tempoBaixa + tempoMedia) / 60;
+     
+
+    if(tempoTotal < 8){
+
+   let valor = tempoTotal * 50
+   alert(`Seu salario é de R$ ${valor}`);
+    }
+    else if(tempoTotal >= 8 && tempoTotal <= 10){
+        let valor = tempoTotal * 75;
+   alert(`Seu salario é de R$ ${valor}`);
+    }
+    else{
+        let valor = tempoTotal * 90;
+   alert(`Seu salario é de R$ ${valor}`);
+    }
+    //SAÍDA
+
+
+</script>

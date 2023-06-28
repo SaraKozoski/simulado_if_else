@@ -1,0 +1,42 @@
+<script>
+    //PROBLEMA: Compra na Feira
+    //Considere que a pessoa foi até a feira e realizou algumas compras, sendo:
+    //Mamão: 5 Unidades
+    //Melancia: 3 Kg
+    //Abacate: 4 Unidades
+    //Cebola: 1.1 Kg
+    //Peça para o usuário informar o preço do Kg ou da Unidade de cada um dos produtos que comprou (citados acima) e peça também para o usuário 
+    //informar quanto dinheiro possui para realizar a compra.
+    //Calcule o custo total dos alimentos e verifique se há dinheiro suficiente para realizar a compra, indicando se sobrará ou faltará dinheiro,
+    //e também apresentando qual foi a quantia que sobrou ou faltou para realizar a compra. Apresente também na tela o valor total da compra.
+
+    //ENTRADA
+    const mamao = Number(prompt(`Insira o valor da unidade do Mamão:`));
+    const melancia = Number(prompt(`Insira o valor do quilo da Melancia:`));
+    const abacate  = Number(prompt(`Insira o valor da unidade do Abacate:`));
+    const cebola = Number(prompt(`Insira o valor do quilo da cebola:`));
+    const dinheiro = Number(prompt(`Insira quanto dinheiro você levou para realizar as compras:`));
+
+    //PROCESSAMENTO
+    const valorMamao = mamao * 5;
+    const valorMelancia = melancia * 3;
+    const valorAbacate = abacate * 4;
+    const valorCebola = cebola * 1.1;
+    const valorCompra = valorMamao + valorMelancia + valorAbacate + valorCebola;
+
+    if(valorCompra > dinheiro ){
+        let valorFinal = valorCompra - dinheiro;
+        alert(`O valor total da compra foi de R$ ${valorCompra} e sobrou R$ ${valorFinal}.`);
+    }
+
+    else if(valorCompra = dinheiro){
+        alert(`O valor total da compra foi de R$ ${valorCompra} e não sobrou dinheiro.`);
+    }
+
+    else {
+        let valorFinal = dinheiro - valorCompra;
+        alert(`O valor total da compra foi de R$ ${valorCompra} e faltou R$ ${valorFinal}`);
+    }
+    //SAÍDA
+
+</script>
